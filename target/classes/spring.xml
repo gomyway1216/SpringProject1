@@ -2,7 +2,17 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+   	http://www.springframework.org/schema/context/spring-context.xsd"
+    xmlns:context = "http://www.springframework.org/schema/context">
 	
-	<bean id="vehicle" class="com.yudai.SpringProject1.Bike"></bean>
+	<context:component-scan base-package='com.yudai.SpringProject1'></context:component-scan>
+	<!--  <bean id="vehicle" class="com.yudai.SpringProject1.Bike"></bean> -->
+	
+	<bean id="tire" class="com.yudai.SpringProject1.Tire">
+	<!-- <property name="brand" value="hello"></property> -->
+	<!-- <constructor-arg value="hi"></constructor-arg> -->
+	</bean>
 </beans>

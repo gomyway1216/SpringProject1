@@ -1,9 +1,26 @@
 package com.yudai.SpringProject1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car implements Vehicle {
 	
+	@Autowired
+	private Tire tire;
 	
+	
+	public Tire getTire() {
+		return tire;
+	}
+
+
+	public void setTire(Tire tire) {
+		this.tire = tire;
+	}
+
+
 	public void drive() {
-		System.out.println("car driving");
+		System.out.println("car " + tire);
 	}
 }
